@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036903B78A40623AA48EB660 /* Pods_jcc_rpc_ocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FC8F5EB0780540B22AA73B /* Pods_jcc_rpc_ocTests.framework */; };
 		9E04A94921D35DA200B53685 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 9E04A94721D35DA200B53685 /* Podfile.lock */; };
 		9E04A94A21D35DA200B53685 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9E04A94821D35DA200B53685 /* Podfile */; };
 		9E04A94C21D35DEA00B53685 /* jcc_rpc_oc.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 9E04A94B21D35DEA00B53685 /* jcc_rpc_oc.xcworkspace */; };
@@ -14,10 +15,10 @@
 		9E04A96521D37A2D00B53685 /* JccdexThreadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A96321D37A2D00B53685 /* JccdexThreadUtil.m */; };
 		9E04A96821D37A5800B53685 /* JccdexExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E04A96621D37A5800B53685 /* JccdexExchange.h */; };
 		9E04A96921D37A5800B53685 /* JccdexExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A96721D37A5800B53685 /* JccdexExchange.m */; };
-		9E715CDE21D3AB9F00DDB7D9 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 9E715CDD21D3AB9E00DDB7D9 /* Pods */; };
 		9EA0F8A921D2177500A24FAC /* jcc_rpc_oc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA0F89F21D2177500A24FAC /* jcc_rpc_oc.framework */; };
 		9ED21B7D21D47B6C004E97D0 /* JccdexExchangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED21B7C21D47B6C004E97D0 /* JccdexExchangeTests.m */; };
 		9ED21B7F21D4A0A0004E97D0 /* JccdexMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ED21B7E21D4A0A0004E97D0 /* JccdexMacro.h */; };
+		D7D340E373E9C270A820C720 /* Pods_jcc_rpc_oc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832CED2EABB3EA876D2FA304 /* Pods_jcc_rpc_oc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46F8ACAFBEB54F5873BFE773 /* Pods-jcc_rpc_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_oc/Pods-jcc_rpc_oc.release.xcconfig"; sourceTree = "<group>"; };
-		7507131773393405A3CDB500 /* Pods-jcc_rpc_ocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_ocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_ocTests/Pods-jcc_rpc_ocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB40EFD52FAEBDF567E794A /* Pods-jcc_rpc_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_oc/Pods-jcc_rpc_oc.release.xcconfig"; sourceTree = "<group>"; };
+		77660172F57DA887E2576926 /* Pods-jcc_rpc_ocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_ocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_ocTests/Pods-jcc_rpc_ocTests.release.xcconfig"; sourceTree = "<group>"; };
+		80FC8F5EB0780540B22AA73B /* Pods_jcc_rpc_ocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jcc_rpc_ocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		832CED2EABB3EA876D2FA304 /* Pods_jcc_rpc_oc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jcc_rpc_oc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E04A94721D35DA200B53685 /* Podfile.lock */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile.lock; sourceTree = "<group>"; };
 		9E04A94821D35DA200B53685 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
 		9E04A94B21D35DEA00B53685 /* jcc_rpc_oc.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = jcc_rpc_oc.xcworkspace; sourceTree = "<group>"; };
@@ -40,15 +43,14 @@
 		9E04A96321D37A2D00B53685 /* JccdexThreadUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JccdexThreadUtil.m; sourceTree = "<group>"; };
 		9E04A96621D37A5800B53685 /* JccdexExchange.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = JccdexExchange.h; sourceTree = "<group>"; };
 		9E04A96721D37A5800B53685 /* JccdexExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JccdexExchange.m; sourceTree = "<group>"; };
-		9E715CDD21D3AB9E00DDB7D9 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		9EA0F89F21D2177500A24FAC /* jcc_rpc_oc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jcc_rpc_oc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA0F8A321D2177500A24FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA0F8A821D2177500A24FAC /* jcc_rpc_ocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jcc_rpc_ocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA0F8AF21D2177500A24FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ED21B7C21D47B6C004E97D0 /* JccdexExchangeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JccdexExchangeTests.m; sourceTree = "<group>"; };
 		9ED21B7E21D4A0A0004E97D0 /* JccdexMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JccdexMacro.h; sourceTree = "<group>"; };
-		A21AA6037312CDA569F7D08A /* Pods-jcc_rpc_ocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_ocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_ocTests/Pods-jcc_rpc_ocTests.release.xcconfig"; sourceTree = "<group>"; };
-		BC6DD6677E3772E34D553760 /* Pods-jcc_rpc_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_oc/Pods-jcc_rpc_oc.debug.xcconfig"; sourceTree = "<group>"; };
+		C4487847E7CB83E5D96C678D /* Pods-jcc_rpc_ocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_ocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_ocTests/Pods-jcc_rpc_ocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1B24B650480B6A1E267D95 /* Pods-jcc_rpc_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_rpc_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_rpc_oc/Pods-jcc_rpc_oc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D340E373E9C270A820C720 /* Pods_jcc_rpc_oc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,34 +67,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA0F8A921D2177500A24FAC /* jcc_rpc_oc.framework in Frameworks */,
+				036903B78A40623AA48EB660 /* Pods_jcc_rpc_ocTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87D78F82F7B15008478F92C3 /* Pods */ = {
+		11DF8E1BB654A05593ABA6F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC6DD6677E3772E34D553760 /* Pods-jcc_rpc_oc.debug.xcconfig */,
-				46F8ACAFBEB54F5873BFE773 /* Pods-jcc_rpc_oc.release.xcconfig */,
-				7507131773393405A3CDB500 /* Pods-jcc_rpc_ocTests.debug.xcconfig */,
-				A21AA6037312CDA569F7D08A /* Pods-jcc_rpc_ocTests.release.xcconfig */,
+				832CED2EABB3EA876D2FA304 /* Pods_jcc_rpc_oc.framework */,
+				80FC8F5EB0780540B22AA73B /* Pods_jcc_rpc_ocTests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9EA0F89521D2177500A24FAC = {
 			isa = PBXGroup;
 			children = (
-				9E715CDD21D3AB9E00DDB7D9 /* Pods */,
 				9E04A94B21D35DEA00B53685 /* jcc_rpc_oc.xcworkspace */,
 				9E04A94821D35DA200B53685 /* Podfile */,
 				9E04A94721D35DA200B53685 /* Podfile.lock */,
 				9EA0F8A121D2177500A24FAC /* jcc_rpc_oc */,
 				9EA0F8AC21D2177500A24FAC /* jcc_rpc_ocTests */,
 				9EA0F8A021D2177500A24FAC /* Products */,
-				87D78F82F7B15008478F92C3 /* Pods */,
+				BA2969543F4C0E6D100EF2BA /* Pods */,
+				11DF8E1BB654A05593ABA6F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +126,17 @@
 				9ED21B7C21D47B6C004E97D0 /* JccdexExchangeTests.m */,
 			);
 			path = jcc_rpc_ocTests;
+			sourceTree = "<group>";
+		};
+		BA2969543F4C0E6D100EF2BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC1B24B650480B6A1E267D95 /* Pods-jcc_rpc_oc.debug.xcconfig */,
+				5DB40EFD52FAEBDF567E794A /* Pods-jcc_rpc_oc.release.xcconfig */,
+				C4487847E7CB83E5D96C678D /* Pods-jcc_rpc_ocTests.debug.xcconfig */,
+				77660172F57DA887E2576926 /* Pods-jcc_rpc_ocTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +235,6 @@
 			files = (
 				9E04A94A21D35DA200B53685 /* Podfile in Resources */,
 				9E04A94921D35DA200B53685 /* Podfile.lock in Resources */,
-				9E715CDE21D3AB9F00DDB7D9 /* Pods in Resources */,
 				9E04A94C21D35DEA00B53685 /* jcc_rpc_oc.xcworkspace in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +444,7 @@
 		};
 		9EA0F8B421D2177500A24FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC6DD6677E3772E34D553760 /* Pods-jcc_rpc_oc.debug.xcconfig */;
+			baseConfigurationReference = CC1B24B650480B6A1E267D95 /* Pods-jcc_rpc_oc.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -456,7 +468,7 @@
 		};
 		9EA0F8B521D2177500A24FAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46F8ACAFBEB54F5873BFE773 /* Pods-jcc_rpc_oc.release.xcconfig */;
+			baseConfigurationReference = 5DB40EFD52FAEBDF567E794A /* Pods-jcc_rpc_oc.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,7 +492,7 @@
 		};
 		9EA0F8B721D2177500A24FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7507131773393405A3CDB500 /* Pods-jcc_rpc_ocTests.debug.xcconfig */;
+			baseConfigurationReference = C4487847E7CB83E5D96C678D /* Pods-jcc_rpc_ocTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = jcc_rpc_ocTests/Info.plist;
@@ -497,7 +509,7 @@
 		};
 		9EA0F8B821D2177500A24FAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A21AA6037312CDA569F7D08A /* Pods-jcc_rpc_ocTests.release.xcconfig */;
+			baseConfigurationReference = 77660172F57DA887E2576926 /* Pods-jcc_rpc_ocTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = jcc_rpc_ocTests/Info.plist;
