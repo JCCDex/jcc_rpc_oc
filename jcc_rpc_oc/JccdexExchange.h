@@ -16,4 +16,6 @@
     
 - (void)requestBalance:(NSString *)address success:(void (^)(NSDictionary *response))success failure:(void(^)(NSError *error))failure;
 
+- (void)createOrder:(NSString *)signature success:(void (^)(NSDictionary *response))success failure:(void(^)(NSError *error))failure;
+
 @end

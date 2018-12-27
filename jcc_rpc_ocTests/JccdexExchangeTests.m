@@ -19,6 +19,7 @@
 
 - (void)setUp {
     _jccdexExchange = [JccdexExchange shareInstance];
+    [_jccdexExchange initExchangeNodes:@[@"https://ewdjbbl8jgf.jccdex.cn"]];
     _testAddress = @"jJDPjcoQisjvLcqWCYY23xe6mbKV6P7E19";
 }
 
@@ -26,7 +27,7 @@
 }
 
 - (void)testRequestBalance {
-    [_jccdexExchange initExchangeNodes:@[@"https://ewdjbbl8jgf.jccdex.cn"]];
+    
     XCTestExpectation *expectation = [self expectationWithDescription:@"request balance successfully"];
     __block BOOL successBlockExecuted = NO;
     [_jccdexExchange requestBalance:_testAddress success:^(NSDictionary *response) {
@@ -37,16 +38,18 @@
     }];
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
     XCTAssertTrue(successBlockExecuted);
-    
-    [_jccdexExchange initExchangeNodes:@[@"https://ewdjbbl8jg.jccdex.cn"]];
-    XCTestExpectation *e = [self expectationWithDescription:@"request balance error"];
-    __block BOOL failureBlockExecuted = NO;
-    [_jccdexExchange requestBalance:_testAddress success:nil failure:^(NSError *error) {
-        failureBlockExecuted = YES;
-        [e fulfill];
-    }];
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
-    XCTAssertTrue(failureBlockExecuted);
 }
+
+//- (void)testCreateOrder {
+//    XCTestExpectation *expectation = [self expectationWithDescription:@"create order successfully"];
+//    __block BOOL successBlockExecuted = NO;
+//    [_jccdexExchange createOrder:@"aaa" success:^(NSDictionary *response) {
+//        NSLog(@"%@", response);
+//        successBlockExecuted = YES;
+//        [expectation fulfill];
+//    } failure:nil];
+//    [self waitForExpectationsWithTimeout:10.0 handler:nil];
+//    XCTAssertTrue(successBlockExecuted);
+//}
 
 @end

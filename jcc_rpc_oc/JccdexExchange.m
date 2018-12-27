@@ -73,4 +73,30 @@
     [dataTask resume];
 }
 
+- (void)createOrder:(NSString *)signature success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure {
+    NSString *node = [self getNode];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@", node, JC_CREATE_ORDER_ROUTE];
+    NSURL *url = [NSURL URLWithString: requestUrl];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [[NSString stringWithFormat:@"sign=%@", signature] dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLSessionDataTask *dataTask = [_sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error == nil) {
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            if (success) {
+                [JccdexThreadUtil runOnMainThread:^{
+                    success(dict);
+                }];
+            }
+        } else {
+            if (failure) {
+                [JccdexThreadUtil runOnMainThread:^{
+                    failure(error);
+                }];
+            }
+        }
+    }];
+    [dataTask resume];
+}
+
 @end
