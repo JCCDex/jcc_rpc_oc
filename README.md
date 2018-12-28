@@ -1,2 +1,3 @@
 # jcc_rpc_oc
-jcc rpc objectived-c version
+
+An objective-c interface for interacting with jingchang server
