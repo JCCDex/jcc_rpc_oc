@@ -163,7 +163,7 @@
     [dataTask resume];
 }
 
-- (void)requestOrders:(NSString *)address page:(NSUInteger)page onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
+- (void)requestOrders:(NSString *)address page:(NSInteger)page onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",node, [NSString stringWithFormat:JC_REQUEST_ORDER_ROUTE,address, (int)page]];
     NSURL *url = [NSURL URLWithString: requestUrl];
@@ -200,7 +200,7 @@
     [dataTask resume];
 }
 
-- (void)requestHistoricTransactions:(NSString *)address ledger:(NSUInteger)ledger seq:(NSUInteger)seq onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
+- (void)requestHistoricTransactions:(NSString *)address ledger:(NSInteger)ledger seq:(NSInteger)seq onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@?ledger=%d&seq=%d",node, [NSString stringWithFormat:JC_REQUEST_HISTORY_ROUTE,address],(int) ledger,(int) seq];
     [self requestHistory:requestUrl success:^(NSDictionary *data) {

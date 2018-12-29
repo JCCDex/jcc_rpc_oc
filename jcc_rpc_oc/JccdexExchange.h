@@ -24,9 +24,9 @@
 
 - (void)transferToken:(NSString *)signature onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
-- (void)requestOrders:(NSString *)address page:(NSUInteger)page onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
+- (void)requestOrders:(NSString *)address page:(NSInteger)page onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
-- (void)requestHistoricTransactions:(NSString *)address ledger:(NSUInteger)ledger seq:(NSUInteger)seq onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
+- (void)requestHistoricTransactions:(NSString *)address ledger:(NSInteger)ledger seq:(NSInteger)seq onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
 - (void)requestHistoricTransactions:(NSString *)address onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
