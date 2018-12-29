@@ -1,10 +1,12 @@
 # jcc_rpc_oc
 
-An objective-c restful api for interacting with the jingchang server
+An objective-c restful api for interacting with the jingchang server.
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Installation with CocoaPods
 
-### To integrate jcc_rpc_oc into your Xcode project using CocoaPods, specify it in your Podfile, then run `pod install`
+To integrate jcc_rpc_oc into your Xcode project using CocoaPods, specify it in your Podfile, then run `pod install`.
 
 ```ruby
 pod 'jcc_rpc_oc'
