@@ -49,7 +49,7 @@
     return _jccdexConfigNodes[value];
 }
 
--(void) requestConfigOnResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail {
+-(void) requestConfig:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail {
     NSString *node = [self getNode];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",node, JC_REQUEST_CONFIG_ROUTE];
     NSURL *url = [NSURL URLWithString: requestUrl];

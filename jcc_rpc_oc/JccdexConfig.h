@@ -15,7 +15,7 @@
 
 - (void)initConfigNodes:(NSArray *)nodes;
 
--(void) requestConfigOnResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
+-(void) requestConfig:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
 @end
 

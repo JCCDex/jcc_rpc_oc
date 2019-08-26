@@ -69,7 +69,7 @@
     [dataTask resume];
 }
 
-- (void) requestAllTickersOnResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
+- (void) requestAllTickers:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",node, JC_REQUEST_ALLTICKERS_ROUTE];
     NSURL *url = [NSURL URLWithString: requestUrl];

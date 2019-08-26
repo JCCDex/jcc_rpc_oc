@@ -16,7 +16,7 @@
 
 - (void) requestTicker:(NSString *)base counter:(NSString *)counter onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
-- (void) requestAllTickersOnResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
+- (void) requestAllTickers:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
 - (void) requestDepth:(NSString *)base counter:(NSString *)counter type:(NSString *)type onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 

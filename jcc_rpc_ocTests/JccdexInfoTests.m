@@ -34,7 +34,7 @@
 
 - (void)testRequestAllTickers {
     XCTestExpectation *expectation = [self expectationWithDescription:@"request allTicker successfully"];
-    [_jccdexInfo requestAllTickersOnResponse:^(NSDictionary *response) {
+    [_jccdexInfo requestAllTickers:^(NSDictionary *response) {
         [expectation fulfill];
     } onFail: nil];
     [self waitForExpectationsWithTimeout:10.0 handler:nil];

@@ -25,7 +25,7 @@
 
 - (void) testRequestConfig{
     XCTestExpectation *expectation = [self expectationWithDescription:@"request config successfully"];
-    [_jccdexConfig requestConfigOnResponse:^(NSDictionary *response) {
+    [_jccdexConfig requestConfig:^(NSDictionary *response) {
         [expectation fulfill];
     } onFail: nil];
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
