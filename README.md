@@ -17,6 +17,8 @@ pod 'jcc_rpc_oc'
 ```objective-c
 #import <jcc_rpc_oc/JccdexExchange.h>
 #import <jcc_rpc_oc/JccdexMacro.h>
+#import <jcc_rpc_oc/JccdexInfo.h>
+#import <jcc_rpc_oc/JccdexConfig.h>
 ```
 
 ## API of JCCDex Exchange
@@ -137,3 +139,139 @@ NSInteger seq = 0;
 } onFail:^(NSError *error) {
 }];
 ```
+
+## API of JCCDex Info
+
+### initInfoNodes
+
+```objective-c
+// init info nodes firstly
+_jccdexInfo = [JccdexInfo shareInstance];
+NSArray *nodes;
+[_jccdexInfo initInfoNodes:nodes];
+```
+
+### requestTicker
+
+```objective-c
+NSString *base = @"";
+NSString *counter = @"";
+[[JccdexInfo shareInstance] requestTicker:base counter:counter onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+### requestAllTickers
+
+```objective-c
+[[JccdexInfo shareInstance] requestAllTickers:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+### requestDepth
+
+```objective-c
+NSString *base = @"";
+NSString *counter = @"";
+NSString *type = @"";
+[[JccdexInfo shareInstance] requestDepth:base counter:counter type:type onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+### requestKline
+
+```objective-c
+NSString *base = @"";
+NSString *counter = @"";
+NSString *type = @"";
+[[JccdexInfo shareInstance] requestKline:base counter:counter type:type onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+### requestHistory
+
+```objective-c
+// request with time
+NSString *base = @"";
+NSString *counter = @"";
+NSString *type = @"";
+NSString *time = @"";
+[[JccdexInfo shareInstance] requestHistory:base counter:counter type:type time:time onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+```objective-c
+// request without time
+NSString *base = @"";
+NSString *counter = @"";
+NSString *type = @"";
+[[JccdexInfo shareInstance] requestHistory:base counter:counter type:type onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+### requestTickerFromCMC
+
+```objective-c
+NSString *token = @"";
+NSString *currency = @"";
+[[JccdexInfo shareInstance] requestTickerFromCMC:token currency:currency onResponse:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
+## API of JCCDex Config
+
+### initConfigNodes
+
+```objective-c
+// init config nodes firstly
+_jccdexConfig = [JccdexConfig shareInstance];
+NSArray *nodes;
+[_jccdexConfig initConfigNodes:nodes];
+```
+
+### requestConfig
+
+```objective-c
+[[JccdexConfig shareInstance] requestConfig:^(NSDictionary *response) {
+NSString *code = [response objectForKey:@"code"];
+if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
+} else {
+}
+} onFail:^(NSError *error) {
+}];
+```
+
