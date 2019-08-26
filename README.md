@@ -210,6 +210,7 @@ if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
 ### requestHistory
 
 ```objective-c
+// request with time
 NSString *base = @"";
 NSString *counter = @"";
 NSString *type = @"";
@@ -224,6 +225,7 @@ if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
 ```
 
 ```objective-c
+// request without time
 NSString *base = @"";
 NSString *counter = @"";
 NSString *type = @"";
