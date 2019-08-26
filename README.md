@@ -168,7 +168,7 @@ if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
 ### requestAllTickers
 
 ```objective-c
-[[JccdexInfo shareInstance] requestAllTickersOnResponse:^(NSDictionary *response) {
+[[JccdexInfo shareInstance] requestAllTickers:^(NSDictionary *response) {
 NSString *code = [response objectForKey:@"code"];
 if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
 } else {
@@ -266,7 +266,7 @@ NSArray *nodes;
 ### requestConfig
 
 ```objective-c
-[[JccdexConfig shareInstance] requestConfigOnResponse:^(NSDictionary *response) {
+[[JccdexConfig shareInstance] requestConfig:^(NSDictionary *response) {
 NSString *code = [response objectForKey:@"code"];
 if ([code isEqualToString:REQUEST_JC_SUCCESS_CODE]) {
 } else {
