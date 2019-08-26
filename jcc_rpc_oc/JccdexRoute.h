@@ -19,10 +19,13 @@
 #define JC_TRNSFER_TOKEN_ROUTE @"/exchange/sign_payment/"
 
 // route of jccdex info api
-#define JC_REQUEST_TICKER_ROUTE  @"/info/ticker/"
+#define JC_REQUEST_TICKER_ROUTE  @"/info/ticker/%@"
 #define JC_REQUEST_ALLTICKERS_ROUTE @"/info/alltickers"
-#define JC_REQUEST_DEPTH_ROUTE @"/info/depth/"
-#define JC_REQUEST_KLINE_ROUTE @"/info/kline/"
-#define JC_REQUEST_INFO_HISTORY_ROUTE @"/info/history/"
+#define JC_REQUEST_DEPTH_ROUTE @"/info/depth/%@"
+#define JC_REQUEST_KLINE_ROUTE @"/info/kline/%@"
+#define JC_REQUEST_INFO_HISTORY_ROUTE @"/info/history/%@"
+
+// route of jccdex config api
+#define JC_REQUEST_CONFIG_ROUTE @"/static/config/jc_config.json"
 
 #endif /* JccdexRoute_h */
