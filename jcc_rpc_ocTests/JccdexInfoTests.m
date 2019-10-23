@@ -18,7 +18,7 @@
 
 - (void)setUp {
     _jccdexInfo = [JccdexInfo shareInstance];
-    [_jccdexInfo initInfoNodes:@[@"https://ewdjbbl8jgf.jccdex.cn"]];
+    [_jccdexInfo initInfoNodes:@[@"https://ijijjh6753cabc.jccdex.cn"]];
 }
 
 - (void)tearDown {
@@ -56,18 +56,10 @@
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
 }
 
-- (void) testRequestHistoryNoTime {
-    XCTestExpectation *expectation = [self expectationWithDescription:@"request history successfully"];
-    [_jccdexInfo requestHistory:@"swt" counter:@"cnt" type:@"newest" onResponse:^(NSDictionary *response) {
-        [expectation fulfill];
-    } onFail: nil];
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
-}
-
 - (void) testRequestHistory {
     XCTestExpectation *expectation = [self expectationWithDescription:@"request history successfully"];
     NSString *time = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
-    [_jccdexInfo requestHistory:@"swt" counter:@"cnt" type:@"newest" time:time onResponse:^(NSDictionary *response) {
+    [_jccdexInfo requestHistory:@"swt" counter:@"cnt" type:@"more" time:time onResponse:^(NSDictionary *response) {
         [expectation fulfill];
     } onFail: nil];
     [self waitForExpectationsWithTimeout:10.0 handler:nil];

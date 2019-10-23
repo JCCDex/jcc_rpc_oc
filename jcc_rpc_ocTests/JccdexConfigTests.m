@@ -17,7 +17,7 @@
 
 - (void)setUp {
     _jccdexConfig = [JccdexConfig shareInstance];
-    [_jccdexConfig initConfigNodes:@[@"https://ewdjbbl8jgf.jccdex.cn"]];
+    [_jccdexConfig initConfigNodes:@[@"https://weidex.vip"]];
 }
 
 - (void)tearDown {
