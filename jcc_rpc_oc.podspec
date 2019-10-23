@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "jcc_rpc_oc"
-  s.version      = "0.1.0"
+  s.version      = "0.1.2"
   s.summary      = "JCCDex rpc with objective-c"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "10.9"
+   s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"

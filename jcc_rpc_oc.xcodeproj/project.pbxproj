@@ -40,6 +40,27 @@
 			remoteGlobalIDString = 4F5A19AB3D4A5042BF8B335F9B0DACA5;
 			remoteInfo = "Pods-jcc_rpc_ocTests";
 		};
+		9E959DAB232FB44A00E4213D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E56042021D5E6240059DAEC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB43D365C592FE351A37A5DCEE5EBBD4;
+			remoteInfo = jcc_oc_base_lib;
+		};
+		9E959DAD232FB44A00E4213D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E56042021D5E6240059DAEC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49BC80D6CE28B351D9DA3DA0B16D899;
+			remoteInfo = MJExtension;
+		};
+		9E959DAF232FB44A00E4213D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E56042021D5E6240059DAEC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60564AE5414A19A323F53B76BA00C8F2;
+			remoteInfo = WebViewJavascriptBridge;
+		};
 		9EA0F8AA21D2177500A24FAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9EA0F89621D2177500A24FAC /* Project object */;
@@ -119,8 +140,11 @@
 		9E56042121D5E6240059DAEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				9E959DAC232FB44A00E4213D /* jcc_oc_base_lib.framework */,
+				9E959DAE232FB44A00E4213D /* MJExtension.framework */,
 				9E56042621D5E6240059DAEC /* Pods_jcc_rpc_oc.framework */,
 				9E56042821D5E6240059DAEC /* Pods_jcc_rpc_ocTests.framework */,
+				9E959DB0232FB44A00E4213D /* WebViewJavascriptBridge.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +276,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9EA0F89521D2177500A24FAC;
 			productRefGroup = 9EA0F8A021D2177500A24FAC /* Products */;
@@ -283,6 +308,27 @@
 			fileType = wrapper.framework;
 			path = Pods_jcc_rpc_ocTests.framework;
 			remoteRef = 9E56042721D5E6240059DAEC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9E959DAC232FB44A00E4213D /* jcc_oc_base_lib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = jcc_oc_base_lib.framework;
+			remoteRef = 9E959DAB232FB44A00E4213D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9E959DAE232FB44A00E4213D /* MJExtension.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MJExtension.framework;
+			remoteRef = 9E959DAD232FB44A00E4213D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9E959DB0232FB44A00E4213D /* WebViewJavascriptBridge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WebViewJavascriptBridge.framework;
+			remoteRef = 9E959DAF232FB44A00E4213D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
