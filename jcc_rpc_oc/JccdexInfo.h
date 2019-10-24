@@ -24,8 +24,6 @@
 
 - (void) requestHistory:(NSString *)base counter:(NSString *)counter type:(NSString *)type time:(NSString *)time onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
-- (void) requestHistory:(NSString *)base counter:(NSString *)counter type:(NSString *)type onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
-
 - (void) requestTickerFromCMC:(NSString *)token currency:(NSString *)currency onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail;
 
 @end
