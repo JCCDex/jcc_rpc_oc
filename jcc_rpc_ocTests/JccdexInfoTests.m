@@ -56,14 +56,6 @@
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
 }
 
-- (void) testRequestHistoryNoTime {
-    XCTestExpectation *expectation = [self expectationWithDescription:@"request history successfully"];
-    [_jccdexInfo requestHistory:@"swt" counter:@"cnt" type:@"newest" onResponse:^(NSDictionary *response) {
-        [expectation fulfill];
-    } onFail: nil];
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
-}
-
 - (void) testRequestHistory {
     XCTestExpectation *expectation = [self expectationWithDescription:@"request history successfully"];
     NSString *time = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];

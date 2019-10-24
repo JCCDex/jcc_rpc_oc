@@ -50,7 +50,7 @@
 
 - (void) requestTicker:(NSString *)base counter:(NSString *)counter onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail{
     NSString *node = [self getNode];
-    NSString *pair = [NSString stringWithFormat: [base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"^CNY$" withString:@"CNY"]]];
+    NSString *pair = [NSString stringWithFormat:@"%@%@", [base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"CNT" withString:@"CNY"]]];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",node, [NSString stringWithFormat:JC_REQUEST_TICKER_ROUTE,pair]];
     NSURL *url = [NSURL URLWithString: requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -91,7 +91,7 @@
 
 - (void) requestDepth:(NSString *)base counter:(NSString *)counter type:(NSString *)type onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
-    NSString *pair = [NSString stringWithFormat: [base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"^CNY$" withString:@"CNY"]]];
+    NSString *pair = [NSString stringWithFormat:@"%@%@", [base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"CNT" withString:@"CNY"]]];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@%@",node, [NSString stringWithFormat:JC_REQUEST_DEPTH_ROUTE,pair],[NSString stringWithFormat:@"/%@",type]];
     NSURL *url = [NSURL URLWithString: requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -112,29 +112,8 @@
 
 - (void) requestKline:(NSString *)base counter:(NSString *)counter type:(NSString *)type onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
-    NSString *pair = [NSString stringWithFormat: [base uppercaseString],[NSString stringWithFormat:(NSString *)@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"^CNY$" withString:@"CNY"]]];
+    NSString *pair = [NSString stringWithFormat:@"%@%@", [base uppercaseString],[NSString stringWithFormat:(NSString *)@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"CNT" withString:@"CNY"]]];
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@%@",node, [NSString stringWithFormat:JC_REQUEST_KLINE_ROUTE,pair],[NSString stringWithFormat:@"/%@",type]];
-    NSURL *url = [NSURL URLWithString: requestUrl];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLSessionDataTask *dataTask = [_sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error == nil) {
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            if (onResponse) {
-                onResponse(dict);
-            }
-        } else {
-            if (onFail) {
-                onFail(error);
-            }
-        }
-    }];
-    [dataTask resume];
-}
-
-- (void) requestHistory:(NSString *)base counter:(NSString *)counter type:(NSString *)type onResponse:(void (^)(NSDictionary *response))onResponse onFail:(void(^)(NSError *error))onFail {
-    NSString *node = [self getNode];
-    NSString *pair = [NSString stringWithFormat: [base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"^CNY$" withString:@"CNY"]]];
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@%@",node, [NSString stringWithFormat:JC_REQUEST_INFO_HISTORY_ROUTE,pair],[NSString stringWithFormat:@"/%@",type]];
     NSURL *url = [NSURL URLWithString: requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *dataTask = [_sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -154,8 +133,11 @@
 
 - (void) requestHistory:(NSString *)base counter:(NSString *)counter type:(NSString *)type time:(NSString *)time onResponse:(void (^)(NSDictionary *))onResponse onFail:(void (^)(NSError *))onFail {
     NSString *node = [self getNode];
-    NSString *pair = [NSString stringWithFormat:[base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"^CNY$" withString:@"CNY"]]];
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@%@?time=%@",node, [NSString stringWithFormat:JC_REQUEST_INFO_HISTORY_ROUTE,pair],[NSString stringWithFormat:@"/%@",type],time];
+    NSString *pair = [NSString stringWithFormat:@"%@%@",[base uppercaseString],[NSString stringWithFormat:@"-%@" ,[[counter uppercaseString]stringByReplacingOccurrencesOfString:@"CNT" withString:@"CNY"]]];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@%@",node, [NSString stringWithFormat:JC_REQUEST_INFO_HISTORY_ROUTE,pair],[NSString stringWithFormat:@"/%@",type]];
+    if ([type isEqualToString:@"newest"]){
+        requestUrl = [NSString stringWithFormat:@"%@?time=%@",requestUrl,time];
+    }
     NSURL *url = [NSURL URLWithString: requestUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *dataTask = [_sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
